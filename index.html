@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Weather App</title>
+    
+</head>
+
+<body onload="setLatAndLng()">
+    <div>
+        <img src="images/graphic.png" class="img-fluid">
+    <div>
+       
+
+    <!-- Primer fila-->
+    <div class="row" id="main-details">
+        <div class="col-6" id="time"> 
+            <div id="current_hour"></div>
+        </div>
+        <div class="col-6">
+            <div id="city" id="city">
+                <div id="city"></div>
+            </div>   
+        </div>
+    </div>  
+    
+    <div class="container">
+        <div class="row no-gutters">
+                <div class="col-4">
+                    <div id="image_status"></div>
+                    <div class="temperature-description">
+                        <div id="description_weather"></div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="temperature-value">
+                        <div id="current_temp"></div>
+                        <div id="celsius">°C</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                        <div id="temp_max"></div>
+                        <div id="temp_min"></div>
+                </div>
+        </div>
+<!-- segunda fila-->
+
+        <div class="row no-gutters">
+            <div class="col-4">
+                <div id="humidity"></div>
+                <img src="images/027-humidity.png" id="humidity_image">
+                <div id="humidity_text">Humidity</div>
+            </div>
+
+            <div class="col-4">
+                <div id="pressure"></div>
+                <img src="images/050-barometer.png" id="pressure_image">
+                <div id="pressure_text">Pressure</div>
+            </div>
+
+            <div class="col-4">
+               <div id="wind_speed"></div>
+                <img src="images/001-wind-1.png" id="wind_image">
+                <div id="wind_text">Wind</div>
+            </div>
+        </div>
+        
+
+    <!--tercer fila-->
+
+        <div class="row no-gutters">
+            <div class="col-4">
+                <div id="sunset"></div>
+                <img src="images/007-sunset.png" id="sunset_image">
+                <div id="sunset_text">Sunset</div>
+            </div>
+    
+        
+            <div class="col-4">
+                <div id="sunrise"></div>
+                <img src="images/008-sunrise.png" id="sunrise_image">
+                <div id="sunrise_text">Sunrise</div>
+            </div>
+
+        
+            <div class="col-4">
+                <div id="dt"></div>
+                <img src="images/sand-clock.png" id="dt_image">
+                <div id="dt_text">DayTime</div>
+            </div>
+        </div>
+        
+    <!--Tercer fila-->
+    <!-- Pronóstico próximos 3 dias-->
+
+        <div class="row no-gutters">
+            <div class="col-4" id="boxShadow">
+                <div class="days">
+                    <div id="day1"></div>
+                    <div id="day_icon1"></div>
+                    <div id="min1"></div>
+                    <div id="max1"></div>
+                </div>
+            </div>
+      
+            <div class="col-4" id="boxShadow">
+                <div class="days"></div>
+                    <div id="day2"></div>
+                    <div id="day_icon2"></div>
+                    <div id="min2"></div>
+                    <div id="max2"></div>
+                </div>
+            </div>
+      
+            <div class="col-4" id="boxShadow">
+                <div class="days">
+                    <div id="day3"></div>
+                    <div id="day_icon3"></div>
+                    <div id="min3"></div>
+                    <div id="max3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
