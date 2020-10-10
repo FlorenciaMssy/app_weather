@@ -10,18 +10,24 @@
 </head>
 
 <body onload="setLatAndLng()">
-    <div>
-        <img src="images/graphic.png" class="img-fluid">
-    <div>
-       
+    <div class="container-search">
+        <img src="images/graphic.png" class="img-fluid" id="image">
+        <div class="center">
+            <form class="form-inline md-form mr-auto mb-4">
+                <input class="form-control mr-sm-2" type="text" placeholder=" Ingresá una ciudad" aria-label="Search" id="search">
 
+                <button class="btn btn-primary btn-sm sumbit" type="button" id="submit">Buscar</button>
+              </form>
+        </div>     
+      </div>
+        
     <!-- Primer fila-->
     <div class="row" id="main-details">
         <div class="col-6" id="time"> 
             <div id="current_hour"></div>
         </div>
         <div class="col-6">
-            <div id="city" id="city">
+            <div id="city">
                 <div id="city"></div>
             </div>   
         </div>
@@ -30,41 +36,48 @@
     <div class="container">
         <div class="row no-gutters">
                 <div class="col-4">
-                    <div id="image_status"></div>
+                    <div id="image_status" class="weather-info"></div>
                     <div class="temperature-description">
                         <div id="description_weather"></div>
                     </div>
                 </div>
+
                 <div class="col-4">
                     <div class="temperature-value">
                         <div id="current_temp"></div>
                         <div id="celsius">°C</div>
                     </div>
                 </div>
+                
                 <div class="col-4">
-                        <div id="temp_max"></div>
-                        <div id="temp_min"></div>
+                        <div class="max-min">
+                            <div id="temp_max"></div>
+                            <div id="temp_min"></div>
+                        </div>
                 </div>
         </div>
 <!-- segunda fila-->
 
         <div class="row no-gutters">
             <div class="col-4">
-                <div id="humidity"></div>
-                <img src="images/027-humidity.png" id="humidity_image">
-                <div id="humidity_text">Humidity</div>
+                <div id="humidity" class="max-min"></div>
+                <div class="icon-position">
+                    <img src="images/027-humidity.png"></div>
+                <div id="font-description">Humidity</div>
             </div>
 
             <div class="col-4">
-                <div id="pressure"></div>
-                <img src="images/050-barometer.png" id="pressure_image">
-                <div id="pressure_text">Pressure</div>
+                <div id="pressure" class="max-min"></div>
+                <div class="icon-position">
+                    <img src="images/050-barometer.png"></div>
+                <div id="font-description">Pressure</div>
             </div>
 
             <div class="col-4">
-               <div id="wind_speed"></div>
-                <img src="images/001-wind-1.png" id="wind_image">
-                <div id="wind_text">Wind</div>
+               <div id="wind_speed" class="max-min"></div>
+               <div class="icon-position">
+                   <img src="images/001-wind-1.png"></div>
+                <div id="font-description">Wind</div>
             </div>
         </div>
         
@@ -73,54 +86,58 @@
 
         <div class="row no-gutters">
             <div class="col-4">
-                <div id="sunset"></div>
-                <img src="images/007-sunset.png" id="sunset_image">
-                <div id="sunset_text">Sunset</div>
+                <div id="sunset" class="max-min"></div>
+                <div class="icon-position">
+                    <img src="images/007-sunset.png">
+                </div>
+                <div id="font-description">Sunset</div>
             </div>
     
         
             <div class="col-4">
-                <div id="sunrise"></div>
-                <img src="images/008-sunrise.png" id="sunrise_image">
-                <div id="sunrise_text">Sunrise</div>
+                <div id="sunrise" class="max-min"></div>
+                <div class="icon-position">
+                    <img src="images/008-sunrise.png">
+                </div>
+                <div id="font-description">Sunrise</div>
             </div>
 
         
             <div class="col-4">
-                <div id="dt"></div>
-                <img src="images/sand-clock.png" id="dt_image">
-                <div id="dt_text">DayTime</div>
+                <div id="dt" class="max-min"></div>
+                <div class="icon-position">
+                    <img src="images/sand-clock.png">
+                </div>
+                <div id="font-description">DayTime</div>
             </div>
         </div>
         
-    <!--Tercer fila-->
     <!-- Pronóstico próximos 3 dias-->
 
         <div class="row no-gutters">
             <div class="col-4" id="boxShadow">
-                <div class="days">
+                <div class="weather-info">
                     <div id="day1"></div>
                     <div id="day_icon1"></div>
-                    <div id="min1"></div>
-                    <div id="max1"></div>
+                    <div id="min1" class="max-min-next"></div>
+                    <div id="max1" class="max-min-next"></div>
                 </div>
             </div>
       
             <div class="col-4" id="boxShadow">
-                <div class="days"></div>
+                <div class="weather-info">
                     <div id="day2"></div>
                     <div id="day_icon2"></div>
-                    <div id="min2"></div>
-                    <div id="max2"></div>
+                    <div id="min2" class="max-min-next" ></div>
+                    <div id="max2" class="max-min-next"></div>
                 </div>
             </div>
-      
             <div class="col-4" id="boxShadow">
-                <div class="days">
+                <div class="weather-info">
                     <div id="day3"></div>
                     <div id="day_icon3"></div>
-                    <div id="min3"></div>
-                    <div id="max3"></div>
+                    <div id="min3" class="max-min-next"></div>
+                    <div id="max3" class="max-min-next"></div>
                 </div>
             </div>
         </div>
